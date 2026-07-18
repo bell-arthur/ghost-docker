@@ -57,6 +57,7 @@ services:
         required: false
     networks:
       - ghost_network
+      - web_network
 
   db:
     image: mysql:8.0.44@sha256:f37951fc3753a6a22d6c7bf6978c5e5fefcf6f31814d98c582524f98eae52b21
@@ -205,3 +206,6 @@ volumes:
 
 networks:
   ghost_network:
+    internal: true
+  web_network:
+    external: true
