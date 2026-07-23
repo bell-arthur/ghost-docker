@@ -210,6 +210,7 @@ services:
         condition: service_healthy
     networks:
       - ghost_network
+      - web_network
 
 volumes:
   # caddy_data:
